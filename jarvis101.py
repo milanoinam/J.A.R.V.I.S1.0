@@ -210,7 +210,7 @@ def TaskExecution():
             speak(f"your IP address is {ip}")
             speak("Anything else?")
 
-        elif "wikipedia" in query or "according to wikipedia"in query:
+        elif "wikipedia" in query or "according to wikipedia" in query:
             speak("searching wikipedia...")
             query = query.replace("wikipedia","")
             results= wikipedia.summary(query, sentences=2)
@@ -247,9 +247,9 @@ def TaskExecution():
             try:
                 speak("OK, Please tell me the message you want to send")
                 msg = take_command().lower()
-                sender_email = "mcoinam01@gmail.com"
-                password= "tech100business"
-                receiver_email = "dhrubitaoinam888@gmail.com"
+                sender_email = "enter_your_email"
+                password= "your_password"
+                receiver_email = "email_of_the_receiver"
                 
                 server = smtplib.SMTP("smtp.gmail.com",587)
                 server.starttls() # Puts the connection to the SMTP server into TLS mode
@@ -360,8 +360,8 @@ def TaskExecution():
             speak("sir what should i say")
             msg = take_command()
             from twilio.rest import Client
-            account_sid = 'ACb280b367bb8a71222da402b6faf9bef3'
-            auth_token = '12b84b782f61fdfdbdce519725ca37e2'
+            account_sid = ''
+            auth_token = ''
             client = Client(account_sid, auth_token)
 
             message = client.messages \
